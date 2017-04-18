@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--License-->
+        <!--Licenses-->
         <scene sceneID="o8q-NV-OVw">
             <objects>
                 <tableViewController storyboardIdentifier="LicenseTableViewController" id="BOZ-2N-aE7" customClass="LicenseTableViewController" customModule="bbuddy" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <label key="tableFooterView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="License" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RpN-N3-gKM">
+                        <label key="tableFooterView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Licenses" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RpN-N3-gKM">
                             <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -39,7 +39,7 @@
                             <outlet property="delegate" destination="BOZ-2N-aE7" id="jDl-8P-64L"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="License" id="K2O-JY-ri9"/>
+                    <tabBarItem key="tabBarItem" title="Licenses" id="K2O-JY-ri9"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sef-Ax-h6E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
