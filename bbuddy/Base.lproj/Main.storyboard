@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Licenses-->
+        <!--License Table View Controller-->
         <scene sceneID="o8q-NV-OVw">
             <objects>
                 <tableViewController storyboardIdentifier="LicenseTableViewController" id="BOZ-2N-aE7" customClass="LicenseTableViewController" customModule="bbuddy" customModuleProvider="target" sceneMemberID="viewController">
@@ -39,11 +39,17 @@
                             <outlet property="delegate" destination="BOZ-2N-aE7" id="jDl-8P-64L"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Licenses" id="K2O-JY-ri9"/>
+                    <navigationItem key="navigationItem" id="Qau-W3-rzb">
+                        <barButtonItem key="rightBarButtonItem" title="Add" id="s2U-Rc-AZz">
+                            <connections>
+                                <action selector="touchAddButton:" destination="BOZ-2N-aE7" id="geW-Uq-FuE"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sef-Ax-h6E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="593" y="-710"/>
+            <point key="canvasLocation" x="1532" y="-710.19490254872574"/>
         </scene>
         <!--Dashboard-->
         <scene sceneID="hNz-n2-bh7">
@@ -75,7 +81,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1688.8" y="-320.68965517241384"/>
+            <point key="canvasLocation" x="2628" y="-320.68965517241384"/>
         </scene>
         <!--Accounts-->
         <scene sceneID="QgD-3D-PaJ">
@@ -241,7 +247,7 @@
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="abF-1V-KIr" kind="relationship" relationship="viewControllers" id="XIl-sK-Kdn"/>
                         <segue destination="wUe-KY-6f2" kind="relationship" relationship="viewControllers" id="EgB-ci-pD2"/>
-                        <segue destination="BOZ-2N-aE7" kind="relationship" relationship="viewControllers" id="Svp-88-YA1"/>
+                        <segue destination="nlC-Il-eeH" kind="relationship" relationship="viewControllers" id="Svp-88-YA1"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -266,6 +272,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Bp-BQ-BrO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="749.60000000000002" y="361.16941529235385"/>
+        </scene>
+        <!--Licenses-->
+        <scene sceneID="MmC-1m-2mH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nlC-Il-eeH" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Licenses" id="K2O-JY-ri9"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4dz-Qn-edZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BOZ-2N-aE7" kind="relationship" relationship="rootViewController" id="737-RB-9Z5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5n6-5N-k3O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="592.79999999999995" y="-710.19490254872574"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

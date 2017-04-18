@@ -40,8 +40,11 @@ class LicenseTest: XCTestCase {
     func testMainTabHaveLicenseTab() {
         var hasVC = false
         for vc in mainTab.viewControllers! {
-            if vc.isMember(of: LicenseTableViewController.classForCoder()) {
-                hasVC = true
+            if let navi = vc as? UINavigationController {
+                let rootVC = navi.viewControllers[0]
+                if rootVC .isMember(of: LicenseTableViewController.classForCoder()) {
+                    hasVC = true
+                }
             }
         }
         XCTAssert(hasVC)
