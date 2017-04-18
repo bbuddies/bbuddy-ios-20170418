@@ -12,7 +12,7 @@
         <!--Licenses-->
         <scene sceneID="ZI0-4X-TO5">
             <objects>
-                <viewController id="5sz-kE-F0H" sceneMemberID="viewController">
+                <viewController id="5sz-kE-F0H" customClass="LicensesViewController" customModule="bbuddy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eFa-vy-eVk"/>
                         <viewControllerLayoutGuide type="bottom" id="mDW-0g-P0Y"/>
@@ -42,15 +42,18 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="addLicensesButton" destination="rc2-5F-IPu" id="Lm0-hb-geg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yjt-bf-aEW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1764" y="-829.83508245877067"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Licenses View Controller-->
         <scene sceneID="1HT-dF-cEd">
             <objects>
-                <viewController id="4Tf-gE-KHF" sceneMemberID="viewController">
+                <viewController id="4Tf-gE-KHF" customClass="AddLicensesViewController" customModule="bbuddy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gJj-I6-hYY"/>
                         <viewControllerLayoutGuide type="bottom" id="XUY-aC-Vzr"/>
@@ -64,12 +67,14 @@
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Month" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DiZ-Qg-7Zi">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="month_textfield"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Amount" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7c5-hs-w9M">
                                         <rect key="frame" x="0.0" y="40" width="343" height="30"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="amount_textfield"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -77,9 +82,13 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="28T-zo-L8f">
                                         <rect key="frame" x="0.0" y="80" width="343" height="30"/>
                                         <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="save_button"/>
                                         <state key="normal" title="Save">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="saveButtonBePressed:" destination="4Tf-gE-KHF" eventType="touchUpInside" id="ivV-pg-4si"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -91,6 +100,10 @@
                             <constraint firstItem="2GS-1y-9f3" firstAttribute="leading" secondItem="1us-2a-cnH" secondAttribute="leadingMargin" id="zlf-Em-DbD"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="amountTextField" destination="7c5-hs-w9M" id="E48-SD-dQ2"/>
+                        <outlet property="monthTextField" destination="DiZ-Qg-7Zi" id="7I8-ZK-JDV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kbU-5y-gnY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
