@@ -1,14 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Licenses-->
+        <scene sceneID="ZI0-4X-TO5">
+            <objects>
+                <viewController id="5sz-kE-F0H" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eFa-vy-eVk"/>
+                        <viewControllerLayoutGuide type="bottom" id="mDW-0g-P0Y"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aoM-b2-htF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Licenses" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="jLw-HW-6tG">
+                                <rect key="frame" x="116" y="312.5" width="143" height="42"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jLw-HW-6tG" firstAttribute="centerX" secondItem="aoM-b2-htF" secondAttribute="centerX" id="peE-K9-h78"/>
+                            <constraint firstItem="jLw-HW-6tG" firstAttribute="centerY" secondItem="aoM-b2-htF" secondAttribute="centerY" id="yTG-hk-md7"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Licenses" id="jcY-nH-9oy">
+                        <barButtonItem key="rightBarButtonItem" title="＋" id="rc2-5F-IPu"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yjt-bf-aEW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1764" y="-829.83508245877067"/>
+        </scene>
         <!--Dashboard-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
@@ -39,7 +73,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1688.8" y="-320.68965517241384"/>
+            <point key="canvasLocation" x="2628" y="-320.68965517241384"/>
         </scene>
         <!--Accounts-->
         <scene sceneID="QgD-3D-PaJ">
@@ -205,6 +239,7 @@
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="abF-1V-KIr" kind="relationship" relationship="viewControllers" id="XIl-sK-Kdn"/>
                         <segue destination="wUe-KY-6f2" kind="relationship" relationship="viewControllers" id="EgB-ci-pD2"/>
+                        <segue destination="Naw-Sp-9R4" kind="relationship" relationship="viewControllers" id="LbS-Ew-g5z"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -229,6 +264,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Bp-BQ-BrO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="749.60000000000002" y="361.16941529235385"/>
+        </scene>
+        <!--Licenses-->
+        <scene sceneID="h6N-Tp-IjB">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Naw-Sp-9R4" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Licenses" id="j8a-we-Z7f"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9l0-aF-I3R">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="5sz-kE-F0H" kind="relationship" relationship="rootViewController" id="ywt-7P-208"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J9H-tf-aT9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="824.79999999999995" y="-829.83508245877067"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
