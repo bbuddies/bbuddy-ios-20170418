@@ -37,6 +37,35 @@ class LicenseTableViewController: UITableViewController {
         return 0
     }
 
+    
+    @IBAction func touchAddButton(_ sender: UIBarButtonItem) {
+        print("touch add");
+        showAddAlert()
+    }
+    
+    func showAddAlert(){
+        let alert = UIAlertController(title: "Add New License", message: "Input Your Info", preferredStyle: UIAlertControllerStyle.alert)
+        
+        alert.addTextField(configurationHandler: textFieldMonthConfiguration)
+        alert.addTextField(configurationHandler: textFieldAmountConfiguration)
+        
+        alert.addAction(UIAlertAction(title: "Save", style: UIAlertActionStyle.default, handler:{ (UIAlertAction)in
+            print("User click Ok button")
+            
+        }))
+        
+        self.present(alert, animated: true, completion: {
+            print("completion block")
+        })
+    }
+    
+    func textFieldMonthConfiguration(textField: UITextField!){
+        textField.placeholder = "month"
+    }
+    
+    func textFieldAmountConfiguration(textField: UITextField!){
+        textField.placeholder = "amount"
+    }
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
