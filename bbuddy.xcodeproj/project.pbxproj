@@ -59,6 +59,9 @@
 		6676919da9fd88c03e585bec /* Typhoon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C5409441E5C7B9B004984CE /* Typhoon.framework */; };
 		6e7c6bd6e7e3896e7133a90c /* Cely.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C9BE17E1E481B580092439B /* Cely.framework */; };
 		7fb6243c66800b9d27ddd87a /* Runes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C1A95B71E4B518500B03F12 /* Runes.framework */; };
+		89C542E71EA610CA00D94C50 /* LicenseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C542E61EA610CA00D94C50 /* LicenseTableViewController.swift */; };
+		89C542E81EA610CA00D94C50 /* LicenseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C542E61EA610CA00D94C50 /* LicenseTableViewController.swift */; };
+		89C542E91EA6117500D94C50 /* LicenseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C542E31EA610A200D94C50 /* LicenseTest.swift */; };
 		90a9536ef1f6fb2d9ca246d8 /* calabash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = bea15760a047c1dd573eee03 /* calabash.framework */; };
 		9342814f1996b9f368fa333e /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A95C71E4DF1AE00B03F12 /* Api.swift */; };
 		9550edf0700089223037f0ad /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C545FD71E49BCA1004225E7 /* Moya.framework */; };
@@ -146,6 +149,8 @@
 		0CC744C51E2C6781007EC830 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0c25ed4e90875cbf6e4dd15c /* CFNetwork.framework */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		746D8FCE1E6EE6C8007D75D1 /* bbuddy-cal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "bbuddy-cal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		89C542E31EA610A200D94C50 /* LicenseTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LicenseTest.swift; path = ../bbuddy/LicenseTest.swift; sourceTree = "<group>"; };
+		89C542E61EA610CA00D94C50 /* LicenseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LicenseTableViewController.swift; sourceTree = "<group>"; };
 		EBC6D80ADA8E08B87CFC678B /* DTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTO.swift; sourceTree = "<group>"; };
 		EBC6DAB39A17406061B40971 /* Accounts.model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Accounts.model.swift; sourceTree = "<group>"; };
 		bea15760a047c1dd573eee03 /* calabash.framework */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.framework; path = calabash.framework; sourceTree = "<group>"; };
@@ -204,6 +209,7 @@
 		0C0AA8EA1E52AAAE008B4B00 /* bbuddyTests */ = {
 			isa = PBXGroup;
 			children = (
+				89C542E31EA610A200D94C50 /* LicenseTest.swift */,
 				0C0AA8F81E52AB83008B4B00 /* AccountTest.swift */,
 				0C0AA9021E52E575008B4B00 /* GeneratedMocks.swift */,
 				0C1282F41E73B3ED00D72735 /* AccountsTest.swift */,
@@ -287,6 +293,7 @@
 				0CC744BD1E2C6781007EC830 /* Main.storyboard */,
 				0C1A95C51E4D936D00B03F12 /* AccountDetailViewController.swift */,
 				0C1A95B11E4B0CAB00B03F12 /* AccountsTableViewController.swift */,
+				89C542E61EA610CA00D94C50 /* LicenseTableViewController.swift */,
 				0C545FD31E499FD0004225E7 /* LoginStyles.swift */,
 				0C545FD11E48B18F004225E7 /* MainTabBarViewController.swift */,
 				0C545FC61E486598004225E7 /* MeViewController.swift */,
@@ -508,6 +515,7 @@
 				0C1282F51E73B3ED00D72735 /* AccountsTest.swift in Sources */,
 				0C0AA9031E52E575008B4B00 /* GeneratedMocks.swift in Sources */,
 				0C0AA8F91E52AB83008B4B00 /* AccountTest.swift in Sources */,
+				89C542E91EA6117500D94C50 /* LicenseTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -526,6 +534,7 @@
 				0C545FD21E48B18F004225E7 /* MainTabBarViewController.swift in Sources */,
 				0C1A95CA1E4E01FC00B03F12 /* AuthPlugin.swift in Sources */,
 				0CC744B81E2C6781007EC830 /* AppDelegate.swift in Sources */,
+				89C542E71EA610CA00D94C50 /* LicenseTableViewController.swift in Sources */,
 				0C545FD61E49AEAA004225E7 /* ApiDefinition.swift in Sources */,
 				0CC744BA1E2C6781007EC830 /* DashboardViewController.swift in Sources */,
 				EBC6D92F1E3A9DBB80672EB7 /* Accounts.model.swift in Sources */,
@@ -548,6 +557,7 @@
 				97e6243cf636338fd4194361 /* MainTabBarViewController.swift in Sources */,
 				19fe892539bc4e20dfcc9d20 /* AuthPlugin.swift in Sources */,
 				46518fc86a93bb32ca47da26 /* AppDelegate.swift in Sources */,
+				89C542E81EA610CA00D94C50 /* LicenseTableViewController.swift in Sources */,
 				f28f603fd97f30329dcb22f0 /* ApiDefinition.swift in Sources */,
 				440b96c67f742c7946d015ce /* DashboardViewController.swift in Sources */,
 				e7782ee485bec12ee3d2425d /* Accounts.model.swift in Sources */,
