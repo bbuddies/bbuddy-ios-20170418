@@ -1,9 +1,9 @@
-github "ChaiOne/Cely"
+github "ChaiOne/Cely" == 1.0.0
 github "thii/FontAwesome.swift"
 github "Moya/Moya"
 github "thoughtbot/Argo"
 github "thoughtbot/Curry"
 github "SwifterSwift/SwifterSwift"
-github "SwiftKit/Cuckoo"
+github "SwiftKit/Cuckoo" == 0.8.3
 github "appsquickly/Typhoon"
 github "ReactiveX/RxSwift"
