@@ -36,12 +36,65 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Licenses" id="jcY-nH-9oy">
-                        <barButtonItem key="rightBarButtonItem" title="＋" id="rc2-5F-IPu"/>
+                        <barButtonItem key="rightBarButtonItem" title="＋" id="rc2-5F-IPu">
+                            <connections>
+                                <segue destination="4Tf-gE-KHF" kind="show" id="W7K-rd-SjF"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yjt-bf-aEW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1764" y="-829.83508245877067"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="1HT-dF-cEd">
+            <objects>
+                <viewController id="4Tf-gE-KHF" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gJj-I6-hYY"/>
+                        <viewControllerLayoutGuide type="bottom" id="XUY-aC-Vzr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1us-2a-cnH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="2GS-1y-9f3">
+                                <rect key="frame" x="16" y="72" width="343" height="110"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Month" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DiZ-Qg-7Zi">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Amount" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7c5-hs-w9M">
+                                        <rect key="frame" x="0.0" y="40" width="343" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="28T-zo-L8f">
+                                        <rect key="frame" x="0.0" y="80" width="343" height="30"/>
+                                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Save">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="2GS-1y-9f3" secondAttribute="trailing" id="Lfp-bd-EPj"/>
+                            <constraint firstItem="2GS-1y-9f3" firstAttribute="top" secondItem="gJj-I6-hYY" secondAttribute="bottom" constant="8" id="tk1-Lg-Rca"/>
+                            <constraint firstItem="2GS-1y-9f3" firstAttribute="leading" secondItem="1us-2a-cnH" secondAttribute="leadingMargin" id="zlf-Em-DbD"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kbU-5y-gnY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2720.8000000000002" y="-830.73463268365822"/>
         </scene>
         <!--Dashboard-->
         <scene sceneID="hNz-n2-bh7">
@@ -73,7 +126,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2628" y="-320.68965517241384"/>
+            <point key="canvasLocation" x="3178" y="-152"/>
         </scene>
         <!--Accounts-->
         <scene sceneID="QgD-3D-PaJ">
