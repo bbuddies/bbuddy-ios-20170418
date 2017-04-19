@@ -17,6 +17,6 @@ class SubscribeViewController: UIViewController {
     }
 
     func setupAccessibility() {
-        calulateSubscriptionPlanButton.accessibilityIdentifier = "calculate_subscription_plan_button"
+        calulateSubscriptionPlanButton.accessibilityIdentifier = "add"
     }
 }

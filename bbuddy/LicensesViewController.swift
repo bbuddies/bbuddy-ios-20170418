@@ -19,6 +19,6 @@ class LicensesViewController: UIViewController {
     }
 
     func setupAccessibility() {
-        addLicensesButton.accessibilityIdentifier = "add_license_button"
+        addLicensesButton.accessibilityIdentifier = "add"
     }
 }
