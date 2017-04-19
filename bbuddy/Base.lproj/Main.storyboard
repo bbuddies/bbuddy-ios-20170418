@@ -306,6 +306,7 @@
                         <segue destination="abF-1V-KIr" kind="relationship" relationship="viewControllers" id="XIl-sK-Kdn"/>
                         <segue destination="wUe-KY-6f2" kind="relationship" relationship="viewControllers" id="EgB-ci-pD2"/>
                         <segue destination="Naw-Sp-9R4" kind="relationship" relationship="viewControllers" id="LbS-Ew-g5z"/>
+                        <segue destination="V3t-3d-iYg" kind="relationship" relationship="viewControllers" id="ZXc-37-V4v"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -331,6 +332,112 @@
             </objects>
             <point key="canvasLocation" x="749.60000000000002" y="361.16941529235385"/>
         </scene>
+        <!--Subscribe-->
+        <scene sceneID="gIZ-j0-P3z">
+            <objects>
+                <viewController id="x56-Ia-pHl" customClass="SubscribeViewController" customModule="bbuddy" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YXp-LZ-lWZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="xxy-V2-foR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aRv-Wz-uKI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Subscribe" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="SBt-Uu-iUm">
+                                <rect key="frame" x="107" y="312" width="161" height="42"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SBt-Uu-iUm" firstAttribute="centerY" secondItem="aRv-Wz-uKI" secondAttribute="centerY" id="Q01-WE-KRE"/>
+                            <constraint firstItem="SBt-Uu-iUm" firstAttribute="centerX" secondItem="aRv-Wz-uKI" secondAttribute="centerX" id="s37-s5-l1O"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Subscribe" id="LwA-ik-AXc">
+                        <barButtonItem key="rightBarButtonItem" title="+" id="9zp-06-Hdk">
+                            <connections>
+                                <segue destination="MMt-Il-4bE" kind="show" id="7Gr-IV-7Vi"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="calulateSubscriptionPlanButton" destination="9zp-06-Hdk" id="K2L-dE-K0a"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n3O-v9-mqf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1764" y="-1558"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="l4W-3h-TrR">
+            <objects>
+                <viewController id="MMt-Il-4bE" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jwN-wF-YAE"/>
+                        <viewControllerLayoutGuide type="bottom" id="AmO-Pn-ayY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pYi-iN-xoy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="oTI-C5-Mbi">
+                                <rect key="frame" x="16" y="72" width="343" height="110"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Start date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5bU-WZ-sSJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="start_date_textfield"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="End date" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1K5-Yp-LJz">
+                                        <rect key="frame" x="0.0" y="40" width="343" height="30"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="end_date_textfield"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zTL-dE-mPi">
+                                        <rect key="frame" x="0.0" y="80" width="343" height="30"/>
+                                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="calulate_button"/>
+                                        <state key="normal" title="Calulate">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="saveButtonBePressed:" destination="4Tf-gE-KHF" eventType="touchUpInside" id="0ak-9t-IaU"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FHx-ja-b1S">
+                                <rect key="frame" x="16" y="202" width="343" height="36"/>
+                                <accessibility key="accessibilityConfiguration" label="total_amount_label"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="oTI-C5-Mbi" secondAttribute="trailing" id="DgA-lP-eli"/>
+                            <constraint firstItem="FHx-ja-b1S" firstAttribute="leading" secondItem="pYi-iN-xoy" secondAttribute="leadingMargin" id="EfJ-AW-S6o"/>
+                            <constraint firstItem="FHx-ja-b1S" firstAttribute="trailing" secondItem="pYi-iN-xoy" secondAttribute="trailingMargin" id="JYM-KZ-V3O"/>
+                            <constraint firstItem="FHx-ja-b1S" firstAttribute="top" secondItem="oTI-C5-Mbi" secondAttribute="bottom" constant="20" id="N82-Fn-mBs"/>
+                            <constraint firstItem="oTI-C5-Mbi" firstAttribute="top" secondItem="jwN-wF-YAE" secondAttribute="bottom" constant="8" id="hiW-0f-vpA"/>
+                            <constraint firstItem="oTI-C5-Mbi" firstAttribute="leading" secondItem="pYi-iN-xoy" secondAttribute="leadingMargin" id="mve-TY-wHk"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ekQ-dt-jmG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2720.8000000000002" y="-1558.4707646176912"/>
+        </scene>
         <!--Licenses-->
         <scene sceneID="h6N-Tp-IjB">
             <objects>
@@ -349,6 +456,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J9H-tf-aT9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="824.79999999999995" y="-829.83508245877067"/>
+        </scene>
+        <!--Subscribe-->
+        <scene sceneID="ijK-TS-daS">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="V3t-3d-iYg" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Subscribe" id="5Za-DX-DMB"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kmd-mf-PVz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="x56-Ia-pHl" kind="relationship" relationship="rootViewController" id="TlU-n1-W7v"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u6u-OD-8lr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="794.39999999999998" y="-1557.5712143928038"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
