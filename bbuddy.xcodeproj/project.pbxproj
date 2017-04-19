@@ -78,6 +78,10 @@
 		F7E4CF3F1EA617C700A563F7 /* License.model.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E4CF3C1EA617C100A563F7 /* License.model.swift */; };
 		F7FD8C1B1EA73B38002D6F93 /* SubscribeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FD8C1A1EA73B38002D6F93 /* SubscribeViewController.swift */; };
 		F7FD8C1C1EA73C3A002D6F93 /* SubscribeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FD8C1A1EA73B38002D6F93 /* SubscribeViewController.swift */; };
+		F7FD8C1E1EA73DA6002D6F93 /* CalculateSubscriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FD8C1D1EA73DA6002D6F93 /* CalculateSubscriptionViewController.swift */; };
+		F7FD8C1F1EA73DA6002D6F93 /* CalculateSubscriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FD8C1D1EA73DA6002D6F93 /* CalculateSubscriptionViewController.swift */; };
+		F7FD8C211EA74232002D6F93 /* SubscriptionCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FD8C201EA74232002D6F93 /* SubscriptionCalculator.swift */; };
+		F7FD8C221EA74232002D6F93 /* SubscriptionCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FD8C201EA74232002D6F93 /* SubscriptionCalculator.swift */; };
 		aa823d3e52a3e8916a4f92d1 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 0C545FC81E4869AC004225E7 /* Cartfile */; };
 		b010197f2148636eb5117101 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CC744BD1E2C6781007EC830 /* Main.storyboard */; };
 		b5d555120dc4193d400737c6 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C545FDB1E49DDB5004225E7 /* Result.framework */; };
@@ -165,6 +169,8 @@
 		F7E4CF361EA6136C00A563F7 /* License.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = License.swift; sourceTree = "<group>"; };
 		F7E4CF3C1EA617C100A563F7 /* License.model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = License.model.swift; sourceTree = "<group>"; };
 		F7FD8C1A1EA73B38002D6F93 /* SubscribeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubscribeViewController.swift; sourceTree = "<group>"; };
+		F7FD8C1D1EA73DA6002D6F93 /* CalculateSubscriptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculateSubscriptionViewController.swift; sourceTree = "<group>"; };
+		F7FD8C201EA74232002D6F93 /* SubscriptionCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubscriptionCalculator.swift; sourceTree = "<group>"; };
 		bea15760a047c1dd573eee03 /* calabash.framework */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.framework; path = calabash.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -313,6 +319,8 @@
 				F7E4CF321EA60DC300A563F7 /* LicensesViewController.swift */,
 				F75E317D1EA609EE00A3576B /* AddLicensesViewController.swift */,
 				F7FD8C1A1EA73B38002D6F93 /* SubscribeViewController.swift */,
+				F7FD8C1D1EA73DA6002D6F93 /* CalculateSubscriptionViewController.swift */,
+				F7FD8C201EA74232002D6F93 /* SubscriptionCalculator.swift */,
 				0CC744C01E2C6781007EC830 /* Assets.xcassets */,
 				0CC744C21E2C6781007EC830 /* LaunchScreen.storyboard */,
 				0CC744C51E2C6781007EC830 /* Info.plist */,
@@ -542,6 +550,7 @@
 				0C545FC71E486598004225E7 /* MeViewController.swift in Sources */,
 				0C0AA9011E52B892008B4B00 /* Account.model.swift in Sources */,
 				0C0AA8FE1E52B81B008B4B00 /* Account.dto.swift in Sources */,
+				F7FD8C1E1EA73DA6002D6F93 /* CalculateSubscriptionViewController.swift in Sources */,
 				0C1A95C61E4D936D00B03F12 /* AccountDetailViewController.swift in Sources */,
 				0C545FD41E499FD0004225E7 /* LoginStyles.swift in Sources */,
 				0C9BE1841E481D000092439B /* User.swift in Sources */,
@@ -550,6 +559,7 @@
 				F75E317E1EA609EE00A3576B /* AddLicensesViewController.swift in Sources */,
 				F7FD8C1B1EA73B38002D6F93 /* SubscribeViewController.swift in Sources */,
 				0C545FD21E48B18F004225E7 /* MainTabBarViewController.swift in Sources */,
+				F7FD8C211EA74232002D6F93 /* SubscriptionCalculator.swift in Sources */,
 				0C1A95CA1E4E01FC00B03F12 /* AuthPlugin.swift in Sources */,
 				0CC744B81E2C6781007EC830 /* AppDelegate.swift in Sources */,
 				0C545FD61E49AEAA004225E7 /* ApiDefinition.swift in Sources */,
@@ -569,6 +579,7 @@
 				F7E4CF3B1EA6156300A563F7 /* LicensesViewController.swift in Sources */,
 				222da3d8b5e0d56287d188d0 /* MeViewController.swift in Sources */,
 				da622fade7652e52dbf2b71d /* Account.model.swift in Sources */,
+				F7FD8C1F1EA73DA6002D6F93 /* CalculateSubscriptionViewController.swift in Sources */,
 				F7E4CF3A1EA614D900A563F7 /* AddLicensesViewController.swift in Sources */,
 				edfc7aef8db95c8815cf87e6 /* Account.dto.swift in Sources */,
 				e9a291d81e58a66016634989 /* AccountDetailViewController.swift in Sources */,
@@ -577,6 +588,7 @@
 				3b36d6776f7471e62ad6f888 /* AccountsTableViewController.swift in Sources */,
 				F7FD8C1C1EA73C3A002D6F93 /* SubscribeViewController.swift in Sources */,
 				9342814f1996b9f368fa333e /* Api.swift in Sources */,
+				F7FD8C221EA74232002D6F93 /* SubscriptionCalculator.swift in Sources */,
 				97e6243cf636338fd4194361 /* MainTabBarViewController.swift in Sources */,
 				19fe892539bc4e20dfcc9d20 /* AuthPlugin.swift in Sources */,
 				46518fc86a93bb32ca47da26 /* AppDelegate.swift in Sources */,
