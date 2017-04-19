@@ -38,9 +38,9 @@ extension ApiDefinition: TargetType, Authorizable {
 
     var baseURL: URL {
         #if TEST
-            return URL(string: "http://192.168.15.54:3000")!
+            return URL(string: "http://localhost:4000")!
         #else
-            return URL(string: "http://192.168.15.54:3000")!
+            return URL(string: "http://localhost:3000")!
         #endif
     }
     var path: String {
