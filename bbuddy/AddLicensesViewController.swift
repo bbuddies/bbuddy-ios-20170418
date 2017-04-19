@@ -17,16 +17,29 @@ class AddLicensesViewController: UIViewController {
     //Mark- actions
     @IBAction func saveButtonBePressed(_ sender: UIButton) {
         guard let month = monthTextField.text, let amount = Int(amountTextField.text ?? "") else {
+            showInvaildAlert()
             return
         }
         
+        addLicense(month: month, amount: amount) { 
+            DispatchQueue.main.async { [unowned me = self] in
+                me.navigationController?.popViewController(animated: true)
+            }
+        }
+    }
+    
+    func showInvaildAlert() {
+        let alertController = UIAlertController(title: "Invaild month or amount", message: "Please enter month or amount", preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    func addLicense(month: String, amount: Int, completion: @escaping () -> Void) {
         let license = License()
         license.month = month
         license.amount = amount
         license.save {
-            DispatchQueue.main.async { [unowned me = self] in
-                me.navigationController?.popViewController(animated: true)
-            }
+            completion()
         }
     }
 }
