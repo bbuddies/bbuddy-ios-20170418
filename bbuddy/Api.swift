@@ -114,4 +114,10 @@ class Api {
         }
     }
     
+    
+    func addLicense(_ month: String, amount: String, action: @escaping () -> Void){
+        request(.addLicense(month: month, amount: amount)) { _ in
+            action()
+        }
+    }
 }

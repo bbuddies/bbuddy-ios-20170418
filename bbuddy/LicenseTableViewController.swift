@@ -9,10 +9,11 @@
 import UIKit
 
 class LicenseTableViewController: UITableViewController {
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -77,12 +78,9 @@ class LicenseTableViewController: UITableViewController {
             return
         }
         
-        if let url = URL(string: "http://192.168.15.54:3000") {
-            URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
-                print("get api license response \(response)")
-                
-                
-            }).resume();
+        let api = Api()
+        api.addLicense(month, amount: amount) { 
+            print("api success")
         }
     }
     

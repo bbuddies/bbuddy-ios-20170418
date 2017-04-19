@@ -16,6 +16,7 @@ enum ApiDefinition {
     case addAccount(account: DTO.Account)
     case updateAccount(account: DTO.Account)
     case deleteAccount(account: DTO.Account)
+    case addLicense(month: String, amount: String)
 }
 
 protocol Authorizable {
@@ -26,6 +27,8 @@ protocol Authorizable {
 extension ApiDefinition: TargetType, Authorizable {
     internal var shouldAuthorize: Bool {
         switch self {
+        case .addLicense:
+            return false
         case .signIn:
             return false
         default:
@@ -35,9 +38,9 @@ extension ApiDefinition: TargetType, Authorizable {
 
     var baseURL: URL {
         #if TEST
-            return URL(string: "http://localhost:4000")!
+            return URL(string: "http://192.168.15.54:3000")!
         #else
-            return URL(string: "http://localhost:3000")!
+            return URL(string: "http://192.168.15.54:3000")!
         #endif
     }
     var path: String {
@@ -50,13 +53,15 @@ extension ApiDefinition: TargetType, Authorizable {
             return "/accounts"
         case .updateAccount(let account), .deleteAccount(let account):
             return "/accounts/\(account.id)"
+        case .addLicense:
+            return "/licenses"
         }
     }
     var method: Moya.Method {
         switch self {
         case .getUser, .getAccounts:
             return .get
-        case .signIn, .addAccount:
+        case .signIn, .addAccount, .addLicense:
             return .post
         case .updateAccount:
             return .put
@@ -72,11 +77,13 @@ extension ApiDefinition: TargetType, Authorizable {
             return ["email": email, "password": password]
         case .addAccount(let account), .updateAccount(let account):
             return ["name": account.name, "balance": account.balance]
+        case .addLicense(let month, let amount):
+            return ["month": month, "amount": amount]
         }
     }
     var parameterEncoding: ParameterEncoding {
         switch self {
-        case .signIn, .addAccount, .updateAccount:
+        case .signIn, .addAccount, .updateAccount, .addLicense:
             return JSONEncoding.default
         default:
             return URLEncoding.default
@@ -97,7 +104,10 @@ extension ApiDefinition: TargetType, Authorizable {
             return data
         case .deleteAccount(let account), .updateAccount(let account), .addAccount(let account):
             return "{\"id\": \(account.id), \"name\": \(account.name), \"balance\": \(account.balance)}".utf8Encoded
+        case .addLicense:
+            return "{\"id\": 100, \"month\": \"2017-04\", \"amount\": \"1000\"}".utf8Encoded
         }
+        
     }
     var task: Task {
         return .request
