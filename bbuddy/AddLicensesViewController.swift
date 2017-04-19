@@ -17,7 +17,7 @@ class AddLicensesViewController: UIViewController {
     //Mark- actions
     @IBAction func saveButtonBePressed(_ sender: UIButton) {
         guard let month = monthTextField.text, let amount = Int(amountTextField.text ?? "") else {
-            showInvaildAlert()
+            showInvalidAlert()
             return
         }
         
@@ -28,24 +28,21 @@ class AddLicensesViewController: UIViewController {
         }
     }
     
-    func showInvaildAlert() {
-        let alertController = UIAlertController(title: "Invaild month or amount", message: "Please enter month or amount", preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-        self.present(alertController, animated: true, completion: nil)
-    }
-    
     func addLicense(month: String, amount: Int, completion: @escaping () -> Void) {
         let license = License()
         license.month = month
         license.amount = amount
         
-        if !license.isVaild() {
-            showInvaildAlert()
-            return
-        }
-        
-        license.save {
+        license.save({
             completion()
-        }
+        }, failed: {
+            showInvalidAlert()
+        })
+    }
+    
+    func showInvalidAlert() {
+        let alertController = UIAlertController(title: "Invaild month or amount", message: "Please enter month or amount", preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        self.present(alertController, animated: true, completion: nil)
     }
 }

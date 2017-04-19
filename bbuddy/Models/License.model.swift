@@ -21,12 +21,16 @@ class License {
         self.api = api
     }
     
-    func save(_ action: @escaping () -> Void){
+    func save(_ action: @escaping () -> Void, failed: () -> Void){
+        if !isValid() {
+            failed()
+        }
+        
         let licenseToUpdate = DTO.License(month: month, amount: amount)
         api.addLicense(licenseToUpdate, to: action)
     }
     
-    func isVaild() -> Bool {
+    func isValid() -> Bool {
         return (!month.isEmpty && amount > 0)
     }
 }
