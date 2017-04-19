@@ -16,7 +16,7 @@ class AddLicensesViewController: UIViewController {
 
     //Mark- actions
     @IBAction func saveButtonBePressed(_ sender: UIButton) {
-        guard let month = monthTextField.text, let amount = Int(amountTextField.text ?? "") else {
+        guard let month = monthTextField.text, let amount = Int(amountTextField.text ?? ""), amount > 0 else {
             showInvaildAlert()
             return
         }
