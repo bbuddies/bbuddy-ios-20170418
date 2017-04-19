@@ -119,4 +119,14 @@ class Api {
             action()
         }
     }
+    
+    func getLicenses(_ action: @escaping ([DTO.License]) -> Void) {
+        request(.getLicenses) { [unowned me = self] response in
+            do {
+                action(try me.mapArray(response))
+            } catch {
+                
+            }
+        }
+    }
 }

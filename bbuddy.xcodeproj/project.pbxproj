@@ -82,6 +82,8 @@
 		F7FD8C1F1EA73DA6002D6F93 /* CalculateSubscriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FD8C1D1EA73DA6002D6F93 /* CalculateSubscriptionViewController.swift */; };
 		F7FD8C211EA74232002D6F93 /* SubscriptionCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FD8C201EA74232002D6F93 /* SubscriptionCalculator.swift */; };
 		F7FD8C221EA74232002D6F93 /* SubscriptionCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FD8C201EA74232002D6F93 /* SubscriptionCalculator.swift */; };
+		F7FD8C241EA74726002D6F93 /* Licenses.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FD8C231EA74726002D6F93 /* Licenses.swift */; };
+		F7FD8C251EA74726002D6F93 /* Licenses.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FD8C231EA74726002D6F93 /* Licenses.swift */; };
 		aa823d3e52a3e8916a4f92d1 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 0C545FC81E4869AC004225E7 /* Cartfile */; };
 		b010197f2148636eb5117101 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CC744BD1E2C6781007EC830 /* Main.storyboard */; };
 		b5d555120dc4193d400737c6 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C545FDB1E49DDB5004225E7 /* Result.framework */; };
@@ -171,6 +173,7 @@
 		F7FD8C1A1EA73B38002D6F93 /* SubscribeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubscribeViewController.swift; sourceTree = "<group>"; };
 		F7FD8C1D1EA73DA6002D6F93 /* CalculateSubscriptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculateSubscriptionViewController.swift; sourceTree = "<group>"; };
 		F7FD8C201EA74232002D6F93 /* SubscriptionCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubscriptionCalculator.swift; sourceTree = "<group>"; };
+		F7FD8C231EA74726002D6F93 /* Licenses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Licenses.swift; sourceTree = "<group>"; };
 		bea15760a047c1dd573eee03 /* calabash.framework */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.framework; path = calabash.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -252,6 +255,7 @@
 				0C0AA9001E52B892008B4B00 /* Account.model.swift */,
 				EBC6DAB39A17406061B40971 /* Accounts.model.swift */,
 				F7E4CF3C1EA617C100A563F7 /* License.model.swift */,
+				F7FD8C231EA74726002D6F93 /* Licenses.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -563,6 +567,7 @@
 				0C1A95CA1E4E01FC00B03F12 /* AuthPlugin.swift in Sources */,
 				0CC744B81E2C6781007EC830 /* AppDelegate.swift in Sources */,
 				0C545FD61E49AEAA004225E7 /* ApiDefinition.swift in Sources */,
+				F7FD8C241EA74726002D6F93 /* Licenses.swift in Sources */,
 				F7E4CF3D1EA617C100A563F7 /* License.model.swift in Sources */,
 				0CC744BA1E2C6781007EC830 /* DashboardViewController.swift in Sources */,
 				F7E4CF331EA60DC300A563F7 /* LicensesViewController.swift in Sources */,
@@ -592,6 +597,7 @@
 				97e6243cf636338fd4194361 /* MainTabBarViewController.swift in Sources */,
 				19fe892539bc4e20dfcc9d20 /* AuthPlugin.swift in Sources */,
 				46518fc86a93bb32ca47da26 /* AppDelegate.swift in Sources */,
+				F7FD8C251EA74726002D6F93 /* Licenses.swift in Sources */,
 				F7E4CF3F1EA617C700A563F7 /* License.model.swift in Sources */,
 				F7E4CF391EA6142300A563F7 /* License.swift in Sources */,
 				f28f603fd97f30329dcb22f0 /* ApiDefinition.swift in Sources */,
