@@ -18,13 +18,6 @@ class License {
         self.init(api: Api())
     }
     
-    class func initWith(month: String, amount: String) -> License! {
-        let license = License()
-        license.month = month
-        license.amount = amount
-        return license
-    }
-    
     init(api: Api){
         self.api = api
     }
@@ -33,8 +26,7 @@ class License {
         if self.month.characters.count == 0 || self.amount.characters.count == 0 || Int(self.amount)! <= 0 {
             action(false)
         }
-        let api = Api()
-        api.addLicense(month, amount: amount) {
+        self.api.addLicense(month, amount: amount) {
             print("api success")
             action(true)
         }
