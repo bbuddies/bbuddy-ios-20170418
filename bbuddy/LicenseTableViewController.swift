@@ -87,9 +87,10 @@ class LicenseTableViewController: UITableViewController {
             let month:String = (alert.textFields?[0].text)!
             let amount:String = (alert.textFields?[1].text)!
             let newLicense:License = License.initWith(month: month, amount: amount);
+            weak var weakSelf = self
             newLicense.save({ (result) in
                 if result == false {
-                    self.alertYY()
+                    weakSelf.alertYY()
                 }
             })
         }))
