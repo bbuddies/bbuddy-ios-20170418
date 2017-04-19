@@ -40,8 +40,36 @@ class LicenseTableViewController: UITableViewController {
 
     
     @IBAction func touchAddButton(_ sender: UIBarButtonItem) {
-        print("touch add");
+        print("touch add")
         showAddAlert()
+    }
+    
+    @IBAction func touchQueryButton(_ sender: UIBarButtonItem) {
+        print("touch query")
+        showQueryAlert()
+    }
+    
+    func showQueryAlert(){
+        let alert = UIAlertController(title: "How much money?", message: "input start / end date (including)", preferredStyle: UIAlertControllerStyle.alert)
+        
+        alert.addTextField(configurationHandler: textFieldStartDateAmountConfiguration)
+        alert.addTextField(configurationHandler: textFieldEndDateAmountConfiguration)
+        
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler:{ (alertAction)in
+            print("User click Ok button")
+            var duration = TimeDuration()
+            duration.startTime = (alert.textFields?[0].text)!
+            duration.endTime = (alert.textFields?[1].text)!
+            
+            let calculator:LicensesCalculator = LicensesCalculator.initWith(duration: duration)
+            calculator.totalAmount({ (totalAmount) in
+                self.alertTotalAmount(amount: totalAmount);
+            })
+        }))
+        
+        self.present(alert, animated: true, completion: {
+            print("completion block")
+        })
     }
     
     func showAddAlert(){
@@ -74,9 +102,26 @@ class LicenseTableViewController: UITableViewController {
     func textFieldAmountConfiguration(textField: UITextField!){
         textField.placeholder = "amount"
     }
+    func textFieldStartDateAmountConfiguration(textField: UITextField!){
+        textField.placeholder = "StartDate"
+    }
+    func textFieldEndDateAmountConfiguration(textField: UITextField!){
+        textField.placeholder = "EndDate"
+    }
     
     func alertYY(){
         let alert = UIAlertController(title: "yy", message: "you have wrong input", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { (UIAlertAction) in
+            
+        }))
+        self.present(alert, animated: true, completion: {
+            print("completion block")
+        })
+    }
+    
+    func alertTotalAmount(amount:Int){
+        let alert = UIAlertController(title: "the total fee is", message: "\(amount)", preferredStyle: UIAlertControllerStyle.alert)
+        alert.accessibilityLabel = "total_amount"
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { (UIAlertAction) in
             
         }))

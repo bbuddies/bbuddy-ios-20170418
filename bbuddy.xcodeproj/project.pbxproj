@@ -64,6 +64,8 @@
 		89C542E91EA6117500D94C50 /* LicenseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C542E31EA610A200D94C50 /* LicenseTest.swift */; };
 		89C542FA1EA71C8400D94C50 /* License.model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C542F91EA71C8400D94C50 /* License.model.swift */; };
 		89C542FB1EA71C8400D94C50 /* License.model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C542F91EA71C8400D94C50 /* License.model.swift */; };
+		89C542FD1EA73A2700D94C50 /* LicensesCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C542FC1EA73A2700D94C50 /* LicensesCalculator.swift */; };
+		89C542FE1EA73A2700D94C50 /* LicensesCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C542FC1EA73A2700D94C50 /* LicensesCalculator.swift */; };
 		90a9536ef1f6fb2d9ca246d8 /* calabash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = bea15760a047c1dd573eee03 /* calabash.framework */; };
 		9342814f1996b9f368fa333e /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A95C71E4DF1AE00B03F12 /* Api.swift */; };
 		9550edf0700089223037f0ad /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C545FD71E49BCA1004225E7 /* Moya.framework */; };
@@ -154,6 +156,7 @@
 		89C542E31EA610A200D94C50 /* LicenseTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LicenseTest.swift; path = ../bbuddy/LicenseTest.swift; sourceTree = "<group>"; };
 		89C542E61EA610CA00D94C50 /* LicenseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LicenseTableViewController.swift; sourceTree = "<group>"; };
 		89C542F91EA71C8400D94C50 /* License.model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = License.model.swift; sourceTree = "<group>"; };
+		89C542FC1EA73A2700D94C50 /* LicensesCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LicensesCalculator.swift; sourceTree = "<group>"; };
 		EBC6D80ADA8E08B87CFC678B /* DTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTO.swift; sourceTree = "<group>"; };
 		EBC6DAB39A17406061B40971 /* Accounts.model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Accounts.model.swift; sourceTree = "<group>"; };
 		bea15760a047c1dd573eee03 /* calabash.framework */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.framework; path = calabash.framework; sourceTree = "<group>"; };
@@ -236,6 +239,7 @@
 				0C0AA9001E52B892008B4B00 /* Account.model.swift */,
 				89C542F91EA71C8400D94C50 /* License.model.swift */,
 				EBC6DAB39A17406061B40971 /* Accounts.model.swift */,
+				89C542FC1EA73A2700D94C50 /* LicensesCalculator.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -534,6 +538,7 @@
 				0C545FD41E499FD0004225E7 /* LoginStyles.swift in Sources */,
 				0C9BE1841E481D000092439B /* User.swift in Sources */,
 				0C1A95B21E4B0CAB00B03F12 /* AccountsTableViewController.swift in Sources */,
+				89C542FD1EA73A2700D94C50 /* LicensesCalculator.swift in Sources */,
 				89C542FA1EA71C8400D94C50 /* License.model.swift in Sources */,
 				0C1A95C81E4DF1AE00B03F12 /* Api.swift in Sources */,
 				0C545FD21E48B18F004225E7 /* MainTabBarViewController.swift in Sources */,
@@ -558,6 +563,7 @@
 				4b6dff9a17af16d320740a2c /* LoginStyles.swift in Sources */,
 				d027b996b58363eb1ee81e7e /* User.swift in Sources */,
 				3b36d6776f7471e62ad6f888 /* AccountsTableViewController.swift in Sources */,
+				89C542FE1EA73A2700D94C50 /* LicensesCalculator.swift in Sources */,
 				89C542FB1EA71C8400D94C50 /* License.model.swift in Sources */,
 				9342814f1996b9f368fa333e /* Api.swift in Sources */,
 				97e6243cf636338fd4194361 /* MainTabBarViewController.swift in Sources */,

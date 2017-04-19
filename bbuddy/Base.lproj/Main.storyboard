@@ -40,6 +40,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="Qau-W3-rzb">
+                        <barButtonItem key="leftBarButtonItem" title="Query" id="xKe-sO-vfh">
+                            <connections>
+                                <action selector="touchQueryButton:" destination="BOZ-2N-aE7" id="iJ8-KD-915"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Add" id="s2U-Rc-AZz">
                             <connections>
                                 <action selector="touchAddButton:" destination="BOZ-2N-aE7" id="geW-Uq-FuE"/>
