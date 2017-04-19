@@ -359,7 +359,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Subscribe" id="LwA-ik-AXc">
-                        <barButtonItem key="rightBarButtonItem" title="+" id="9zp-06-Hdk">
+                        <barButtonItem key="rightBarButtonItem" image="Calculator" id="9zp-06-Hdk">
                             <connections>
                                 <segue destination="MMt-Il-4bE" kind="show" id="7Gr-IV-7Vi"/>
                             </connections>
@@ -477,6 +477,9 @@
             <point key="canvasLocation" x="794.39999999999998" y="-1557.5712143928038"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Calculator" width="16" height="16"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="CN3-NN-upW"/>
     </inferredMetricsTieBreakers>
