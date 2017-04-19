@@ -38,8 +38,15 @@ class License {
         }
     }
     
-    func price () -> Int {
-        return Int(amount)!
+    func pricePerDay () -> Float {
+        let calendar = Calendar.current
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM"
+        
+        let range = calendar.range(of: .day, in: .month, for: dateFormatter.date(from: month)!)!
+        let numDays = Float(range.count)
+        let price = Float(amount)! / numDays
+        return price
     }
     
 }

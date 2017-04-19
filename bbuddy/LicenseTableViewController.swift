@@ -57,14 +57,11 @@ class LicenseTableViewController: UITableViewController {
         
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler:{ (alertAction)in
             print("User click Ok button")
-            var duration = TimeDuration()
-            duration.startTime = (alert.textFields?[0].text)!
-            duration.endTime = (alert.textFields?[1].text)!
             
-            let calculator:LicensesCalculator = LicensesCalculator.initWith(duration: duration)
+            let calculator:LicensesCalculator = LicensesCalculator(startDate: (alert.textFields?[0].text)!, endDate: (alert.textFields?[1].text)!)
             calculator.totalAmount({ (totalAmount) in
                 if let fee = totalAmount {
-                    self.alertTotalAmount(amount: fee)
+                    self.alertTotalAmount(amount: Int(fee))
                 }else{
                     self.alertErrorInput()
                 }
@@ -93,7 +90,7 @@ class LicenseTableViewController: UITableViewController {
             weak var weakSelf = self
             newLicense.save({ (result) in
                 if result == false {
-                    weakSelf.alertYY()
+                    weakSelf?.alertYY()
                 }
             })
         }))
