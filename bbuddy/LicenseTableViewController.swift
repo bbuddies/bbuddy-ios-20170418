@@ -54,7 +54,12 @@ class LicenseTableViewController: UITableViewController {
             print("User click Ok button")
             let month:String = (alert.textFields?[0].text)!
             let amount:String = (alert.textFields?[1].text)!
-            self.addLicenseToServer(month: month, amount: amount)
+            let newLicense:License = License.initWith(month: month, amount: amount);
+            newLicense.save({ (result) in
+                if result == false {
+                    self.alertYY()
+                }
+            })
         }))
         
         self.present(alert, animated: true, completion: {
@@ -68,20 +73,6 @@ class LicenseTableViewController: UITableViewController {
     
     func textFieldAmountConfiguration(textField: UITextField!){
         textField.placeholder = "amount"
-    }
-    
-    func addLicenseToServer(month: String, amount: String){
-        print("month: \(month) amount: \(amount)")
-        
-        if month.characters.count == 0 || amount.characters.count == 0 || Int(amount)! <= 0 {
-            self.alertYY()
-            return
-        }
-        
-        let api = Api()
-        api.addLicense(month, amount: amount) { 
-            print("api success")
-        }
     }
     
     func alertYY(){
