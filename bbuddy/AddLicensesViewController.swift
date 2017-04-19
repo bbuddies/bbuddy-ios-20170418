@@ -13,13 +13,18 @@ class AddLicensesViewController: UIViewController {
     @IBOutlet weak var monthTextField: UITextField!
     @IBOutlet weak var amountTextField: UITextField!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
+
     //Mark- actions
     @IBAction func saveButtonBePressed(_ sender: UIButton) {
-        print(monthTextField.text ?? "")
-        print(amountTextField.text ?? "")
+        guard let month = monthTextField.text, let amount = Int(amountTextField.text ?? "") else {
+            return
+        }
+        
+        let license = License()
+        license.month = month
+        license.amount = amount
+        license.save {
+            
+        }
     }
 }
