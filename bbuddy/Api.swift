@@ -114,4 +114,9 @@ class Api {
         }
     }
     
+    func addLicense(_ license: DTO.License, to action: @escaping () -> Void) {
+        request(.addLicense(license: license)) { _ in
+            action()
+        }
+    }
 }

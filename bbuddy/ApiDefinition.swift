@@ -16,6 +16,7 @@ enum ApiDefinition {
     case addAccount(account: DTO.Account)
     case updateAccount(account: DTO.Account)
     case deleteAccount(account: DTO.Account)
+    case addLicense(license: DTO.License)
 }
 
 protocol Authorizable {
@@ -50,13 +51,15 @@ extension ApiDefinition: TargetType, Authorizable {
             return "/accounts"
         case .updateAccount(let account), .deleteAccount(let account):
             return "/accounts/\(account.id)"
+        case .addLicense:
+            return "/license"
         }
     }
     var method: Moya.Method {
         switch self {
         case .getUser, .getAccounts:
             return .get
-        case .signIn, .addAccount:
+        case .signIn, .addAccount, .addLicense:
             return .post
         case .updateAccount:
             return .put
@@ -72,6 +75,8 @@ extension ApiDefinition: TargetType, Authorizable {
             return ["email": email, "password": password]
         case .addAccount(let account), .updateAccount(let account):
             return ["name": account.name, "balance": account.balance]
+        case .addLicense(let license):
+            return ["month": license.month, "amount": license.amount];
         }
     }
     var parameterEncoding: ParameterEncoding {
@@ -97,6 +102,8 @@ extension ApiDefinition: TargetType, Authorizable {
             return data
         case .deleteAccount(let account), .updateAccount(let account), .addAccount(let account):
             return "{\"id\": \(account.id), \"name\": \(account.name), \"balance\": \(account.balance)}".utf8Encoded
+        case .addLicense(let license):
+            return "{\"month\": \(license.month)}, \"amount\":\(license.amount)}".utf8Encoded
         }
     }
     var task: Task {

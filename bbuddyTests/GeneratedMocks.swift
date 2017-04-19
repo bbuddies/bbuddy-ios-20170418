@@ -1,4 +1,4 @@
-// MARK: - Mocks generated from file: bbuddy/Api.swift at 2017-04-17 11:51:33 +0000
+// MARK: - Mocks generated from file: bbuddy/Api.swift at 2017-04-19 02:00:55 +0000
 
 //
 //  Api.swift
@@ -49,6 +49,10 @@ class MockApi: Api, Cuckoo.Mock {
         return manager.call("deleteAccount(_: DTO.Account, to: @escaping () -> Void)", parameters: (account, action), original: observed.map { o in return { (account: DTO.Account, action: @escaping () -> Void) in o.deleteAccount(account, to: action) } })
     }
     
+    override func addLicense(_ license: DTO.License, to action: @escaping () -> Void) {
+        return manager.call("addLicense(_: DTO.License, to: @escaping () -> Void)", parameters: (license, action), original: observed.map { o in return { (license: DTO.License, action: @escaping () -> Void) in o.addLicense(license, to: action) } })
+    }
+    
     struct __StubbingProxy_Api: Cuckoo.StubbingProxy {
         private let manager: Cuckoo.MockManager
         
@@ -79,6 +83,11 @@ class MockApi: Api, Cuckoo.Mock {
         func deleteAccount<M1: Cuckoo.Matchable, M2: Cuckoo.Matchable>(_ account: M1, to action: M2) -> Cuckoo.StubNoReturnFunction<(DTO.Account, () -> Void)> where M1.MatchedType == DTO.Account, M2.MatchedType == () -> Void {
             let matchers: [Cuckoo.ParameterMatcher<(DTO.Account, () -> Void)>] = [wrap(matchable: account) { $0.0 }, wrap(matchable: action) { $0.1 }]
             return Cuckoo.StubNoReturnFunction(stub: manager.createStub("deleteAccount(_: DTO.Account, to: @escaping () -> Void)", parameterMatchers: matchers))
+        }
+        
+        func addLicense<M1: Cuckoo.Matchable, M2: Cuckoo.Matchable>(_ license: M1, to action: M2) -> Cuckoo.StubNoReturnFunction<(DTO.License, () -> Void)> where M1.MatchedType == DTO.License, M2.MatchedType == () -> Void {
+            let matchers: [Cuckoo.ParameterMatcher<(DTO.License, () -> Void)>] = [wrap(matchable: license) { $0.0 }, wrap(matchable: action) { $0.1 }]
+            return Cuckoo.StubNoReturnFunction(stub: manager.createStub("addLicense(_: DTO.License, to: @escaping () -> Void)", parameterMatchers: matchers))
         }
     }
     
@@ -122,6 +131,12 @@ class MockApi: Api, Cuckoo.Mock {
             let matchers: [Cuckoo.ParameterMatcher<(DTO.Account, () -> Void)>] = [wrap(matchable: account) { $0.0 }, wrap(matchable: action) { $0.1 }]
             return manager.verify("deleteAccount(_: DTO.Account, to: @escaping () -> Void)", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
         }
+        
+        @discardableResult
+        func addLicense<M1: Cuckoo.Matchable, M2: Cuckoo.Matchable>(_ license: M1, to action: M2) -> Cuckoo.__DoNotUse<Void> where M1.MatchedType == DTO.License, M2.MatchedType == () -> Void {
+            let matchers: [Cuckoo.ParameterMatcher<(DTO.License, () -> Void)>] = [wrap(matchable: license) { $0.0 }, wrap(matchable: action) { $0.1 }]
+            return manager.verify("addLicense(_: DTO.License, to: @escaping () -> Void)", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
+        }
     }
 }
 
@@ -144,6 +159,10 @@ class ApiStub: Api {
     }
     
     override func deleteAccount(_ account: DTO.Account, to action: @escaping () -> Void) {
+        return DefaultValueRegistry.defaultValue(for: (Void).self)
+    }
+    
+    override func addLicense(_ license: DTO.License, to action: @escaping () -> Void) {
         return DefaultValueRegistry.defaultValue(for: (Void).self)
     }
 }
