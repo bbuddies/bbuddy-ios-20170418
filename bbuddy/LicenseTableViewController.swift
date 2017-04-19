@@ -49,9 +49,11 @@ class LicenseTableViewController: UITableViewController {
         alert.addTextField(configurationHandler: textFieldMonthConfiguration)
         alert.addTextField(configurationHandler: textFieldAmountConfiguration)
         
-        alert.addAction(UIAlertAction(title: "Save", style: UIAlertActionStyle.default, handler:{ (UIAlertAction)in
+        alert.addAction(UIAlertAction(title: "Save", style: UIAlertActionStyle.default, handler:{ (alertAction)in
             print("User click Ok button")
-            
+            let month:String = (alert.textFields?[0].text)!
+            let amount:String = (alert.textFields?[1].text)!
+            self.addLicenseToServer(month: month, amount: amount)
         }))
         
         self.present(alert, animated: true, completion: {
@@ -65,6 +67,33 @@ class LicenseTableViewController: UITableViewController {
     
     func textFieldAmountConfiguration(textField: UITextField!){
         textField.placeholder = "amount"
+    }
+    
+    func addLicenseToServer(month: String, amount: String){
+        print("month: \(month) amount: \(amount)")
+        
+        if month.characters.count == 0 || amount.characters.count == 0 || Int(amount)! <= 0 {
+            self.alertYY()
+            return
+        }
+        
+        if let url = URL(string: "http://192.168.15.54:3000") {
+            URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
+                print("get api license response \(response)")
+                
+                
+            }).resume();
+        }
+    }
+    
+    func alertYY(){
+        let alert = UIAlertController(title: "yy", message: "you have wrong input", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { (UIAlertAction) in
+            
+        }))
+        self.present(alert, animated: true, completion: {
+            print("completion block")
+        })
     }
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
