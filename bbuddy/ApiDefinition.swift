@@ -52,7 +52,7 @@ extension ApiDefinition: TargetType, Authorizable {
         case .updateAccount(let account), .deleteAccount(let account):
             return "/accounts/\(account.id)"
         case .addLicense:
-            return "/license"
+            return "/licenses"
         }
     }
     var method: Moya.Method {
@@ -81,7 +81,7 @@ extension ApiDefinition: TargetType, Authorizable {
     }
     var parameterEncoding: ParameterEncoding {
         switch self {
-        case .signIn, .addAccount, .updateAccount:
+        case .signIn, .addAccount, .updateAccount, .addLicense:
             return JSONEncoding.default
         default:
             return URLEncoding.default
