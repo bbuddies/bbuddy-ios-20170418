@@ -59,11 +59,13 @@ class LicenseTableViewController: UITableViewController {
             print("User click Ok button")
             
             let calculator:LicensesCalculator = LicensesCalculator(startDate: (alert.textFields?[0].text)!, endDate: (alert.textFields?[1].text)!)
+            
+            weak var weakSelf = self
             calculator.totalAmount({ (totalAmount) in
                 if let fee = totalAmount {
-                    self.alertTotalAmount(amount: Int(fee))
+                    weakSelf.alertTotalAmount(amount: Int(fee))
                 }else{
-                    self.alertErrorInput()
+                    weakSelf.alertErrorInput()
                 }
             })
         }))
