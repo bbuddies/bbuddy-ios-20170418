@@ -63,9 +63,9 @@ class LicenseTableViewController: UITableViewController {
             weak var weakSelf = self
             calculator.totalAmount({ (totalAmount) in
                 if let fee = totalAmount {
-                    weakSelf.alertTotalAmount(amount: Int(fee))
+                    weakSelf?.alertTotalAmount(amount: Int(fee))
                 }else{
-                    weakSelf.alertErrorInput()
+                    weakSelf?.alertErrorInput()
                 }
             })
         }))
