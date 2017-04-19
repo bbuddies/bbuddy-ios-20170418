@@ -24,7 +24,9 @@ class AddLicensesViewController: UIViewController {
         license.month = month
         license.amount = amount
         license.save {
-            
+            DispatchQueue.main.async { [unowned me = self] in
+                me.navigationController?.popViewController(animated: true)
+            }
         }
     }
 }
