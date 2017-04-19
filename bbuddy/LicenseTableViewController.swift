@@ -63,7 +63,11 @@ class LicenseTableViewController: UITableViewController {
             
             let calculator:LicensesCalculator = LicensesCalculator.initWith(duration: duration)
             calculator.totalAmount({ (totalAmount) in
-                self.alertTotalAmount(amount: totalAmount);
+                if let fee = totalAmount {
+                    self.alertTotalAmount(amount: fee)
+                }else{
+                    self.alertErrorInput()
+                }
             })
         }))
         
@@ -111,6 +115,16 @@ class LicenseTableViewController: UITableViewController {
     
     func alertYY(){
         let alert = UIAlertController(title: "yy", message: "you have wrong input", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { (UIAlertAction) in
+            
+        }))
+        self.present(alert, animated: true, completion: {
+            print("completion block")
+        })
+    }
+    
+    func alertErrorInput(){
+        let alert = UIAlertController(title: "Error yy", message: "you have wrong input", preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { (UIAlertAction) in
             
         }))
