@@ -38,7 +38,7 @@ class LicensesCalculator {
         if self.duration.startTime == nil || self.duration.endTime == nil || self.duration.startTime! > self.duration.endTime! {
             action(nil)
         }else{
-            let total = self._calculateForTotalAmountFromLicense()
+            let total = self.calculateForTotalAmountFromDuration(duration: self.duration, licenses: self.fakePrice())
             action(total)
         }
     }
@@ -62,15 +62,14 @@ class LicensesCalculator {
         return [license1, license2, license3, license4, license5, license6, license7, license8, license9, license10, license11, license12];
     }
     
-    private func _calculateForTotalAmountFromLicense() -> Float {
-        self.license = self.fakePrice()
+    func calculateForTotalAmountFromDuration(duration: TimeDuration, licenses:Array<License>) -> Float {
         
         let calendar = Calendar.current
         var currentDate = duration.startTime!
         var totalAmount:Float = 0.0
         while currentDate < duration.endTime! + 86400 {
             let month = calendar.component(.month, from: currentDate)
-            let currentLicense = self.license[month - 1]
+            let currentLicense = licenses[month - 1]
             totalAmount = totalAmount + currentLicense.pricePerDay()
             currentDate.addTimeInterval(86400)
         }
