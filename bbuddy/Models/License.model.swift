@@ -22,6 +22,12 @@ class License {
         self.api = api
     }
     
+    convenience init(month: String, amount: String){
+        self.init(api: Api())
+        self.month = month
+        self.amount = amount
+    }
+    
     func save(_ action: @escaping (Bool) -> Void){
         if self.month.characters.count == 0 || self.amount.characters.count == 0 || Int(self.amount)! <= 0 {
             action(false)
@@ -32,5 +38,8 @@ class License {
         }
     }
     
+    func price () -> Int {
+        return Int(amount)!
+    }
     
 }
