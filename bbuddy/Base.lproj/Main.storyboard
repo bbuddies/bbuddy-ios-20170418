@@ -373,10 +373,10 @@
             </objects>
             <point key="canvasLocation" x="1764" y="-1558"/>
         </scene>
-        <!--View Controller-->
+        <!--Calculate Subscription View Controller-->
         <scene sceneID="l4W-3h-TrR">
             <objects>
-                <viewController id="MMt-Il-4bE" sceneMemberID="viewController">
+                <viewController id="MMt-Il-4bE" customClass="CalculateSubscriptionViewController" customModule="bbuddy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jwN-wF-YAE"/>
                         <viewControllerLayoutGuide type="bottom" id="AmO-Pn-ayY"/>
@@ -410,6 +410,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
+                                            <action selector="calculateButtonBePressed:" destination="MMt-Il-4bE" eventType="touchUpInside" id="1Mf-Ce-Jql"/>
                                             <action selector="saveButtonBePressed:" destination="4Tf-gE-KHF" eventType="touchUpInside" id="0ak-9t-IaU"/>
                                         </connections>
                                     </button>
@@ -433,6 +434,11 @@
                             <constraint firstItem="oTI-C5-Mbi" firstAttribute="leading" secondItem="pYi-iN-xoy" secondAttribute="leadingMargin" id="mve-TY-wHk"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="amountLabel" destination="FHx-ja-b1S" id="rbz-0u-JrG"/>
+                        <outlet property="endDateTextField" destination="1K5-Yp-LJz" id="nFP-PB-hGZ"/>
+                        <outlet property="startDateTextField" destination="5bU-WZ-sSJ" id="0pN-1y-bPx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ekQ-dt-jmG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
