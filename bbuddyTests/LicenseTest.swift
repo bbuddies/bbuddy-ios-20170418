@@ -26,6 +26,13 @@ class LicenseTest: QuickSpec {
                 license.save(){ }
                 verify(api).addLicense(equal(to: licenseDTO), to: anyClosure())
             }
+            it("add a invaild license with amount is 0"){
+                let api = MockApi()
+                let license = License(api: api)
+                license.month = "2017-04"
+                license.amount = 0
+                expect(license.isVaild()).to(beFalse())
+            }
         }
     }
 }

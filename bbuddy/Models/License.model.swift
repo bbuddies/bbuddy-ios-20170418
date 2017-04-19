@@ -25,4 +25,8 @@ class License {
         let licenseToUpdate = DTO.License(month: month, amount: amount)
         api.addLicense(licenseToUpdate, to: action)
     }
+    
+    func isVaild() -> Bool {
+        return (!month.isEmpty && amount > 0)
+    }
 }

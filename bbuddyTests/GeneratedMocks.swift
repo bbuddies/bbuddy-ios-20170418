@@ -1,4 +1,4 @@
-// MARK: - Mocks generated from file: bbuddy/Api.swift at 2017-04-19 02:00:55 +0000
+// MARK: - Mocks generated from file: bbuddy/Api.swift at 2017-04-19 06:08:03 +0000
 
 //
 //  Api.swift
